@@ -13,14 +13,16 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use ({
-	'rose-pine/neovim',
-	as = 'rose-pine',
-	config = function()
-		vim.cmd('colorscheme rose-pine')
+  use ('folke/tokyonight.nvim')
+  -- use ({
+	-- 'rose-pine/neovim',
+	-- as = 'rose-pine',
+	-- config = function()
+		-- vim.cmd('colorscheme rose-pine')
 
-	end
-  })
+	-- end
+  -- })
+
 --  use ({'Mofiqul/vscode.nvim',
 --	as = 'vscode',
 --	config = function()
@@ -72,8 +74,18 @@ return require('packer').startup(function(use)
 
  -- use('vim-airline/vim-airline')
  use('tpope/vim-commentary')
- use('preservim/nerdtree')
+ -- use('preservim/nerdtree')
+
+ -- use {'francoiscabrol/ranger.vim',
+ --    requires = {'rbgrouleff/bclose.vim'}
+ -- }
+ use('iberianpig/ranger-explorer.vim')
+ use('rbgrouleff/bclose.vim')
+ -- use('kevinhwang91/rnvimr')
+
  use('xiyaowong/transparent.nvim')
  use('mfussenegger/nvim-dap')
  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+ use ('CRAG666/code_runner.nvim')
+ use('stevearc/vim-arduino')
 end)
